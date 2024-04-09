@@ -25,5 +25,4 @@ Investigate the minting function in the UniswapV2Pair contract. When depositing 
 ## Problem 5
 What is a sandwich attack, and how might it impact you when initiating a swap?
 
-> Solution
-攻擊者會在交易者提交交易前和交易後迅速進行大量的交易，使得交易者在交易貨幣時得到不利的價格（買貴/賣低），進而造成資產的損失。
+> 攻擊者會在交易者提交交易前和交易後迅速進行大量的交易，使得交易者在交易貨幣時得到不利的價格（買貴/賣低），進而造成資產的損失。
