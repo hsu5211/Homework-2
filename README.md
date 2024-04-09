@@ -10,19 +10,19 @@ Provide your profitable path, the amountIn, amountOut value for each swap, and y
 ## Problem 2
 What is slippage in AMM, and how does Uniswap V2 address this issue? Please illustrate with a function as an example.
 
-> Solution
+> Slippage is when the quoted price of an asset changes when a trade is executed, resulting in a trader receiving less/more tokens as a result. Uniswap V2 addresses the issue of slippage by allowing users to set a maximum slippage tolerance when they initiate a trade. The trade will only be executed if the actual price falls within the user's specified slippage tolerance.
 
 ## Problem 3
 Please examine the mint function in the UniswapV2Pair contract. Upon initial liquidity minting, a minimum liquidity is subtracted. What is the rationale behind this design?
 
-> Solution
+> It's a prevention from "inflation attack" by burning first MINIMUM_LIQUIDITY tokens to ensure that no one owns the entire supply of LP tokens and can easily manipulate the price.
 
 ## Problem 4
 Investigate the minting function in the UniswapV2Pair contract. When depositing tokens (not for the first time), liquidity can only be obtained using a specific formula. What is the intention behind this?
 
-> Solution
+> The formula is intended to maintain the correct ratio of assets in the pool and to ensure that the value of existing liquidity tokens is not diluted.
 
 ## Problem 5
 What is a sandwich attack, and how might it impact you when initiating a swap?
 
-> 攻擊者會在交易者提交交易前和交易後迅速進行大量的交易，使得交易者在交易貨幣時得到不利的價格（買貴/賣低），進而造成資產的損失。
+> Attackers rapidly execute large transactions just before and after a trader submits their trade, resulting in the trader getting an unfavorable price (buying high/selling low), thereby causing a loss of the trader's assets.
