@@ -10,7 +10,7 @@ Provide your profitable path, the amountIn, amountOut value for each swap, and y
 ## Problem 2
 What is slippage in AMM, and how does Uniswap V2 address this issue? Please illustrate with a function as an example.
 
-> Slippage is when the quoted price of an asset changes when a trade is executed, resulting in a trader receiving less/more tokens as a result. Uniswap V2 addresses the issue of slippage by allowing users to set a maximum slippage tolerance when they initiate a trade. The trade will only be executed if the actual price falls within the user's specified slippage tolerance.
+> Slippage is when the quoted price of an asset changes when a trade is executed, resulting in a trader receiving less/more tokens as a result. Uniswap V2 addresses the issue of slippage by allowing users to set a maximum slippage tolerance when they initiate a trade. The trade will only be executed if the actual price falls within the user's specified slippage tolerance. Consider there two tokens in the pool, $A$ and $B$ with amount $x$ and amount $y$ respectively. According to the constant product formula $x \times y=k$, if a user wants to swap an amount $\Delta A$ of A token, the user will receives $\Delta B=y-\frac{k}{x+\Delta A}$. It shows that larger $\Delta A$ leads to more significant deviation from the expected price.
 
 ## Problem 3
 Please examine the mint function in the UniswapV2Pair contract. Upon initial liquidity minting, a minimum liquidity is subtracted. What is the rationale behind this design?
